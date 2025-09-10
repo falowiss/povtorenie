@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>About User</h1>
+    <form method="post" action="user/">
+        {% csrf_token %}
+        <h2>Name:</h2>
+        <input name="InpName">
+        <h2>Date:</h2>
+        <input name="date" type="UserDate">
+        <h2>Email User:</h2>
+        <input name="InpEmail" type="email"><br>
+        <input type="submit" name="btn">
+        <button>1</button>
+    </form>
+
+    <form method="post" action="student">
+        <input type="text" name="stud">
+        <input type="text" name="stud">
+        <input type="text" name="stud">
+        <input type="text" name="stud">
+    </form>
+
+    <form method="post" action="yarik">
+        <h2>о ярике:</h2>
+        <input type="text" name="yarik_info">
+        <input type="submit" name="btn_yarik">
+    </form>
+
+</body>
+</html>
