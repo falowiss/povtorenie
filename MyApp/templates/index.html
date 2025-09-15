@@ -1,36 +1,82 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1>About User</h1>
+<body> -->
+    <!-- <h1>About User</h1>
     <form method="post" action="user/">
         {% csrf_token %}
         <h2>Name:</h2>
         <input name="InpName">
+        <h2>Email:</h2>
+        <input name="InpEmail" type="email"><br>
+        <h2>Pasword:</h2>
+        <input name="PasswordInput" type="PasswordInput"><br>
+        <h2>Password confirmation:</h2>
+        <input name="PasswordInput" type="PasswordInput"><br>
+        <p>
+            <label>СОГЛАСИЯ С ПРАВИДЛАМИ</label><br>
+            <div>
+            
+                <input type="checkbox" name="courses" value="{{course.id}}" />{{ course.name}} <br />
+            </div>
+        </p>
+
+        <input type="submit" name="btn">
+       
+    </form>
+ -->
+
+
+
+
+
+
+
+
+    
+
+<!--  
+</body>
+</html>
+
+ -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <h1>About User</h1>
+    
+    {% if not submitted %}
+    <form method="post">
+        {% csrf_token %}
+        <h2>Name:</h2>
+        <input name="InpName">
         <h2>Date:</h2>
-        <input name="date" type="UserDate">
+        <input name="date" type="date">
         <h2>Email User:</h2>
         <input name="InpEmail" type="email"><br>
         <input type="submit" name="btn">
-        <button>1</button>
     </form>
-
-    <form method="post" action="student">
-        <input type="text" name="stud">
-        <input type="text" name="stud">
-        <input type="text" name="stud">
-        <input type="text" name="stud">
-    </form>
-
-    <form method="post" action="yarik">
-        <h2>о ярике:</h2>
-        <input type="text" name="yarik_info">
-        <input type="submit" name="btn_yarik">
-    </form>
-
+    {% else %}
+    <h2>Submitted Data:</h2>
+    <p>Name: {{ name }}</p>
+    <p>Date: {{ date }}</p>
+    <p>Email: {{ email }}</p>
+    {% endif %}
 </body>
 </html>
